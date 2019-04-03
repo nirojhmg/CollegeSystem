@@ -28,6 +28,17 @@ export default class StudentDashboard extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.up}>
+        <Avatar rounded
+  source={{
+    uri:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
+  }}
+  size="large"
+ 
+/>
+<Text>Niroj Humagain</Text>
+        </View>
       <View style={styles.dashboard}>
         <Dashboard items={items} background={true} card={this._card} column={2} />
         </View>
@@ -45,8 +56,16 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR_PINK_LIGHT
   },
   dashboard:{
-    flex:1,
-    marginTop: 70
-  }
+    flex: 8,//70% of column
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  },
+  up: {
+    flex: 2,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
 
 });
